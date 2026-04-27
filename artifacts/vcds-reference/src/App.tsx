@@ -10,6 +10,7 @@ import FaultCodes from "@/pages/fault-codes";
 import WarningLights from "@/pages/warning-lights";
 import SecurityCodes from "@/pages/security-codes";
 import Setup from "@/pages/setup";
+import Community from "@/pages/community";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function Router() {
         <Route path="/fault-codes" component={FaultCodes} />
         <Route path="/warning-lights" component={WarningLights} />
         <Route path="/security-codes" component={SecurityCodes} />
+        <Route path="/community" component={Community} />
         <Route path="/setup" component={Setup} />
         <Route component={NotFound} />
       </Switch>

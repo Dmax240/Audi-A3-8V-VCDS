@@ -184,6 +184,35 @@ This document contains features, procedures, and customizations discovered and v
 
 ---
 
+## 🔓 MQB Platform Engineering & Development Mode Access [COMMUNITY]
+
+### Development Mode Security Codes [COMMUNITY]
+**Source**: [MQB.pl Security Access Guide](https://mqb.pl/en/security-access-logins-for-mqb-platform-vcds-odis-vcp/)  
+**Status**: Community-Verified | Advanced access for tuning
+
+**Special Development Logins [COMMUNITY]:**
+- **S12345** - Standard development mode access
+- **S11111** - Alternative development mode entry
+- **15090** - Engineering login (primary)
+- **63522** - Engineering login (alternate)
+
+**What This Unlocks [COMMUNITY]:**
+- Lane assist deactivation threshold (driver activity sensor)
+- Additional long coding options beyond standard menu
+- Heated seats detailed settings
+- Post-heat function duration (0-120 minutes, default 10 minutes)
+- Advanced CAN gateway network configurations
+- Security access to modules normally read-only
+
+**Requirements [COMMUNITY]:**
+- VCDS with engineering capability or ODIS Engineering / VCP software
+- Access to special development login codes
+- Knowledge of proper security access procedures (DO NOT attempt without backup)
+
+**Risk**: HIGH - Development mode changes can affect vehicle operation if incorrect codes are entered; always verify changes with live data monitoring
+
+---
+
 ## 🎆 Module 09 - Lighting [COMMUNITY]
 
 ### Dynamic DRL Pulse [COMMUNITY]
@@ -213,7 +242,93 @@ This document contains features, procedures, and customizations discovered and v
 
 ---
 
+## 💾 Module 19 - CAN Gateway [COMMUNITY]
+
+### Disable Start-Stop Function [COMMUNITY]
+**Source**: [VAG-Coding.net MQB Modifications](https://www.vag-coding.net/)  
+**Status**: Community-Verified | Permanent feature disable
+
+**Procedure [COMMUNITY]:**
+- Module: 19 (CAN Gateway)
+- Adaptation Channel: "Start-Stop System Management: Active → Inactive"
+- Security Code: 31347
+- Effect: Completely disables automatic engine shut-off at traffic lights
+
+**When to Use [COMMUNITY]:**
+- Battery health concerns (frequent charging cycles wear battery faster)
+- Transmission wear (start-stop cycling wears DSG clutch)
+- Cold weather (engine struggles to restart when very cold)
+- Preferred driving style (some prefer always-running engine)
+
+**Community Notes**: Unlike module-level start-stop disable, this prevents any auto-shutoff across entire CAN network; reversible by changing to "Active"
+
+**Risk**: Low; cosmetic disable with no impact on other systems; vehicle remains fully operational
+
+---
+
+## 🔓 MQB Platform Engineering & Development Mode Access [COMMUNITY]
+
+### Development Mode Security Codes [COMMUNITY]
+**Source**: [MQB.pl Security Access Guide](https://mqb.pl/en/security-access-logins-for-mqb-platform-vcds-odis-vcp/)  
+**Status**: Community-Verified | Advanced access for tuning
+
+**Special Development Logins [COMMUNITY]:**
+- **S12345** - Standard development mode access
+- **S11111** - Alternative development mode entry
+- **15090** - Engineering login (primary)
+- **63522** - Engineering login (alternate)
+
+**What This Unlocks [COMMUNITY]:**
+- Lane assist deactivation threshold (driver activity sensor)
+- Additional long coding options beyond standard menu
+- Heated seats detailed settings
+- Post-heat function duration (0-120 minutes, default 10 minutes)
+- Advanced CAN gateway network configurations
+- Security access to modules normally read-only
+
+**Requirements [COMMUNITY]:**
+- VCDS with engineering capability or ODIS Engineering / VCP software
+- Access to special development login codes
+- Knowledge of proper security access procedures (DO NOT attempt without backup)
+
+**Risk**: HIGH - Development mode changes can affect vehicle operation if incorrect codes are entered; always verify changes with live data monitoring
+
+---
+
 ## 📊 Module 01 - Engine (EA888 Gen3b) [COMMUNITY]
+
+### Custom Boost/Turbo Pressure Measuring Blocks [COMMUNITY]
+**Source**: [Audizine Boost Gauge Thread](https://www.audizine.com/forum/showthread.php/745493-Boost-Gauge-Activation-(Vagcom)/) + [Ross-Tech VCDS Measuring Blocks](https://www.ross-tech.com/vcds/tour/m-blocks.php)  
+**Status**: Community-Verified | Real-time boost logging via VCDS
+
+**Live Data Channels for Boost Monitoring [COMMUNITY]:**
+- **Measuring Block 115**: Requested boost vs. Actual boost (kPa)
+- **Measuring Block 117**: Real-time boost with RPM correlation
+- Both blocks update 10 times per second (100ms intervals)
+
+**How to Access [COMMUNITY]:**
+1. Module 01 → Select "Measuring Blocks" → Choose Block 115
+2. Display shows: "Requested: X kPa | Actual: Y kPa"
+3. Normal values: 0 kPa idle, 50-60 kPa city, 75-95 kPa highway, 100-140 kPa WOT
+4. Record to CSV using VCDS Graph tool for boost logging
+
+**Unit Conversion [COMMUNITY]:**
+- VCDS reports in millibars (mbar)
+- 1000 mbar = 14.5 psi
+- MAP sensor max: 2540 mbar (22.3 psi absolute)
+- Gauge pressure = Absolute pressure - atmospheric (always subtract 1013 mbar)
+
+**Diagnosing Boost Issues [COMMUNITY]:**
+- **Soft boost limit**: Actual boost hits limit, doesn't respond to throttle increase
+- **Boost spike**: Actual exceeds requested (controller issue)
+- **Lagging response**: 2+ second delay between throttle and boost rise (turbo lag/wastegate)
+- **Fluctuation**: Requested and actual differ >10 kPa (sensor drift)
+
+**Community Use**: Popular for diagnosing turbo wastegate issues; plotted against RPM for performance mapping
+
+---
+
+## 📊 Module 01 - Engine (Continued) [COMMUNITY]
 
 ### Fuel Injector Cleaning Procedure [COMMUNITY]
 **Source**: [BT Performance Garage - Engine Maintenance](https://btperformance.eu/)  
