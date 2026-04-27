@@ -29,6 +29,7 @@ All data extracted from the production VCDS Reference application. Every file co
 | **SPECIAL_FUNCTIONS.md** | 40+ hidden procedures and module-specific functions |
 | **PERFORMANCE_TUNING.md** | 25 performance optimization options with safety ratings |
 | **DIAGNOSTIC_GUIDES.md** | 15 decision tree flowcharts for complex diagnostics |
+| **COMMUNITY_DISCOVERED_FEATURES.md** | 20+ [COMMUNITY]-flagged undocumented procedures and customizations verified by DIY community |
 | **EXHAUSTIVE_DOCUMENTATION.md** | Complete inventory and consolidation summary |
 
 ---

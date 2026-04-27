@@ -8,6 +8,7 @@
 3. **SPECIAL_FUNCTIONS.md** - 40+ module functions & procedures
 4. **PERFORMANCE_TUNING.md** - 25 performance optimizations
 5. **DIAGNOSTIC_GUIDES.md** - 15 decision tree flowcharts
+6. **COMMUNITY_DISCOVERED_FEATURES.md** - 20+ [COMMUNITY]-flagged undocumented features
 
 ### Production Application Data (TypeScript Data Files - EXTRACTED)
 6. **FAULT_CODES_COMPLETE.ts** - **222 Fault Codes** (comprehensive DTC reference)
@@ -45,7 +46,8 @@ From community forums and technical resources:
 | **Special Functions** | 40+ | ✅ Complete |
 | **Performance Tuning Options** | 25 | ✅ Complete |
 | **Diagnostic Decision Trees** | 15 | ✅ Complete |
-| **Total Lines of Documentation** | 4,200+ | ✅ Complete |
+| **[COMMUNITY]-Flagged Features** | 20+ | ✅ Community-Verified |
+| **Total Lines of Documentation** | 4,500+ | ✅ Complete |
 
 ---
 
@@ -140,6 +142,7 @@ Complete security codes for all protected modules:
 - SPECIAL_FUNCTIONS.md (349 lines)
 - PERFORMANCE_TUNING.md (281 lines)
 - DIAGNOSTIC_GUIDES.md (818 lines)
+- COMMUNITY_DISCOVERED_FEATURES.md (320 lines, 20+ [COMMUNITY]-flagged entries)
 - EXHAUSTIVE_DOCUMENTATION.md (this file)
 
 **Complete Data Files (TypeScript - Production Quality):**
@@ -196,7 +199,8 @@ Complete security codes for all protected modules:
 9. **40+ Special Functions** - Hidden procedures and advanced features
 10. **25 Performance Options** - Tuning with safety assessments
 11. **35+ Warning Lights** - Dashboard warning meanings
-12. **Community Resources** - Links to forums and expert guides
+12. **20+ [COMMUNITY]-Flagged Features** - Undocumented procedures verified by DIY community
+13. **Community Resources** - Links to forums and expert guides
 
 ---
 
@@ -220,6 +224,12 @@ Complete security codes for all protected modules:
 - Check ADAPTATIONS_COMPLETE.ts for comfort settings
 - Reference FAULT_CODES_COMPLETE.ts for early warning detection
 
+### For Advanced Customization (Community Methods)
+- Review COMMUNITY_DISCOVERED_FEATURES.md for [COMMUNITY]-flagged procedures
+- All entries include source attribution and risk assessment
+- Cross-verify with VCDS live data before and after modifications
+- Review community disclaimers regarding warranty impact
+
 ---
 
 ## 📈 COMPLETENESS VERIFICATION
@@ -236,9 +246,11 @@ Complete security codes for all protected modules:
 - ✅ 40+ special functions and hidden procedures
 - ✅ 25 performance tuning options with assessments
 - ✅ 15 diagnostic decision trees
-- ✅ External resources and community links
+- ✅ 20+ [COMMUNITY]-flagged undocumented features with risk assessments
+- ✅ External resources and community links with attribution
 - ✅ Cost estimates for repairs
 - ✅ Safety warnings for critical procedures
+- ✅ Community disclaimers and warranty impact notices
 
 ---
 
