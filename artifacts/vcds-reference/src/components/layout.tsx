@@ -1,20 +1,20 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "wouter";
-import { 
-  Sidebar, 
-  SidebarContent, 
-  SidebarHeader, 
-  SidebarMenu, 
-  SidebarMenuButton, 
-  SidebarMenuItem, 
-  SidebarProvider, 
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarTrigger
 } from "@/components/ui/sidebar";
 import { modules } from "@/data/modules";
-import { Shield, AlertTriangle, Key, Wrench, Home, Settings2 } from "lucide-react";
+import { Shield, AlertTriangle, Key, Wrench, Home, Settings2, Users } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -68,6 +68,14 @@ export function Layout({ children }: LayoutProps) {
                       <Link href="/security-codes">
                         <Shield className="h-4 w-4 text-primary" />
                         <span>Security Codes</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                  <SidebarMenuItem>
+                    <SidebarMenuButton asChild isActive={location === "/community"}>
+                      <Link href="/community">
+                        <Users className="h-4 w-4 text-blue-400" />
+                        <span>Community Features</span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
